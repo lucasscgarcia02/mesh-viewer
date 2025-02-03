@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D Mesh Viewer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Left Sidebar -->
+    <div id="sidebar-left">
+        <div class="box">
+            <h3>Objects in Scene</h3>
+            <ul id="scene-objects"></ul>
+        </div>
+        <div class="box">
+            <h3>Transformations</h3>
+            <label>Translation:</label>
+            <input type="number" placeholder="X">
+            <input type="number" placeholder="Y">
+            <input type="number" placeholder="Z">
+            
+            <label>Rotation:</label>
+            <input type="number" placeholder="X">
+            <input type="number" placeholder="Y">
+            <input type="number" placeholder="Z">
+            
+            <label>Scale:</label>
+            <input type="number" placeholder="X">
+            <input type="number" placeholder="Y">
+            <input type="number" placeholder="Z">
+        </div>
+    </div>
+    
+    <!-- Center WebGL Canvas -->
+    <div id="canvas-container">
+        <canvas id="scene-canvas"></canvas>
+    </div>
+    
+    <!-- Right Sidebar: Model Menu -->
+    <div id="model-menu">
+        <h3>Available Models</h3>
+        <input type="file" id="folderInput" webkitdirectory multiple>
+        <div id="model-menu-list"></div>
+    </div>
+
+    <script type="module" src="model-menu.js"></script>
+</body>
+</html>
